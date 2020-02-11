@@ -4,8 +4,8 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const StyledHeader = styled.ul`
+  margin: 33px auto 20px auto;
   max-width: 700px;
-  margin: auto;
   display: flex;
   justify-content: space-evenly;
   background-color: yellow;
