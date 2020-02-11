@@ -1,7 +1,7 @@
-import Page from "../components/Page";
+import About from "../components/About";
 
-const IndexPage = () => {
-  return <Page />;
+const AboutPage = () => {
+  return <About />;
 };
 
-export default IndexPage;
+export default AboutPage;
