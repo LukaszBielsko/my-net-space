@@ -33,10 +33,7 @@ const Page = ({ children }) => {
     <>
       <GlobalStyle />
       <Header />
-      <Inner>
-        <div>content of whatever is clicked goes here</div>
-        {children}
-      </Inner>
+      <Inner>{children}</Inner>
     </>
   );
 };

@@ -17,9 +17,15 @@ const StyledHeader = styled.ul`
 const Header = props => {
   return (
     <StyledHeader>
-      <li>about</li>
-      <li>posts</li>
-      <li>contact</li>
+      <Link href="/">
+        <li>about</li>
+      </Link>
+      <Link href="/posts">
+        <li>posts</li>
+      </Link>
+      <Link href="/contact">
+        <li>contact</li>
+      </Link>
     </StyledHeader>
   );
 };
