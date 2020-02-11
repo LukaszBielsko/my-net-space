@@ -6,13 +6,12 @@ class Posts extends Component {
   };
 
   componentDidMount() {
-    const example = async () => {
-      return fetch("https://jsonplaceholder.typicode.com/todos/1")
-        .then(res => res.json())
-        .then(data => {
-          this.state({ post: data });
-        });
-    };
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        this.setState({ post: data });
+      });
   }
 
   render() {
