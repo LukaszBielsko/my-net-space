@@ -2,25 +2,28 @@ import React, { Component } from "react";
 
 class Posts extends Component {
   state = {
-    post: null
+    posts: null
   };
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/todos/1")
+    // fetch("https://jsonplaceholder.typicode.com/todos/1")
+    fetch("https://mighty-plains-24471.herokuapp.com/api/posts")
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        this.setState({ post: data });
+        this.setState({ posts: data });
       });
   }
 
   render() {
-    const { post } = this.state;
+    const { posts } = this.state;
     return (
       <div>
-        {post ? (
+        {posts ? (
           <div>
-            <p>{post.title}</p>
+            {posts.map(post => (
+              <p>{post.title}</p>
+            ))}
           </div>
         ) : (
           <p>loading</p>
