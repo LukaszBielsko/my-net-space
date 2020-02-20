@@ -6,7 +6,6 @@ class Posts extends Component {
   };
 
   componentDidMount() {
-    // fetch("https://jsonplaceholder.typicode.com/todos/1")
     fetch("https://mighty-plains-24471.herokuapp.com/api/posts")
       .then(res => res.json())
       .then(data => {
@@ -22,7 +21,10 @@ class Posts extends Component {
         {posts ? (
           <div>
             {posts.map(post => (
-              <p>{post.title}</p>
+              <div>
+                <p>{post.title}</p>
+                <p>{post.body}</p>
+              </div>
             ))}
           </div>
         ) : (
